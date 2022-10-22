@@ -1,0 +1,24 @@
+{
+  "name": "vite-plugin-html-info-inject",
+  "version": "1.0.0",
+  "description": "vite plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaothing/vite-plugin-html-info-inject.git"
+  },
+  "keywords": [
+    "vite",
+    "plugin",
+    "html"
+  ],
+  "author": "gaothing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaothing/vite-plugin-html-info-inject/issues"
+  },
+  "homepage": "https://github.com/gaothing/vite-plugin-html-info-inject#readme"
+}
