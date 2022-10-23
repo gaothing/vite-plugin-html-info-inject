@@ -5,7 +5,7 @@ vite 插件，可配置化的添加html的页面，title、keywords、descriptio
 > example
 
 ```js
-import vitePluginInfoInject from 'vitePluginInfoInject'
+import vitePluginInfoInject from 'vite-plugin-info-inject'
 export default defineConfig({
   plugins: [
     // ...

@@ -1,6 +1,6 @@
 import { Regex } from "./enums";
 import {is, isArray, isFunction, isString} from './utils/is'
-export const htmlPlugin = (options) => {
+const vitePluginInfoInject = (options) => {
   const { title, script, css,keywords,description } = options;
   
   return {
@@ -36,3 +36,4 @@ export const htmlPlugin = (options) => {
     }
   }
 };
+export default vitePluginInfoInject;
