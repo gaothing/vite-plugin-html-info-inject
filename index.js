@@ -1,6 +1,8 @@
-import { Regex } from "./enums";
-import {is, isArray, isFunction, isString} from './utils/is'
-const vitePluginInfoInject = (options) => {
+const { Regex } = require('./enums');
+// import { Regex } from "./enums";
+
+const { is, isArray, isFunction, isString } =require('./utils/is'); 
+const vitePluginHtmlInfoInject = (options) => {
   const { title, script, css,keywords,description } = options;
   
   return {
@@ -36,4 +38,4 @@ const vitePluginInfoInject = (options) => {
     }
   }
 };
-export default vitePluginInfoInject;
+module.exports = vitePluginHtmlInfoInject;

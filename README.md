@@ -5,11 +5,11 @@ vite 插件，可配置化的添加html的页面，title、keywords、descriptio
 > example
 
 ```js
-import vitePluginInfoInject from 'vite-plugin-info-inject'
+import vitePluginHtmlInfoInject from 'vite-plugin-html-info-inject'
 export default defineConfig({
   plugins: [
     // ...
-    vitePluginInfoInject({
+    vitePluginHtmlInfoInject({
       title:"你好，我是title",
       script:[{src:"https://baidu.ccom",pre:true}],
       css:[{src:"https://ss.cc"},{src:"https://ss.cc"}],

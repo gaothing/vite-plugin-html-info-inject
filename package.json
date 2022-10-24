@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-html-info-inject",
-  "version": "1.0.0",
-  "description": "vite plugin",
+  "version": "1.0.8",
+  "description": "vite plugin vite-plugin-html-info-inject",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,8 +13,12 @@
   "keywords": [
     "vite",
     "plugin",
-    "html"
+    "html",
+    "vite-plugin-html-info-inject"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "gaothing",
   "license": "ISC",
   "bugs": {
