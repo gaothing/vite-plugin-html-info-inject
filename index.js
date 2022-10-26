@@ -1,11 +1,15 @@
+const fs = require('fs');
+const path= require('path');
 const { Regex } = require('./enums');
-// import { Regex } from "./enums";
-
 const { is, isArray, isFunction, isString } =require('./utils/is'); 
 const vitePluginHtmlInfoInject = (options) => {
-  const { title, script, css,keywords,description } = options;
-  
+  const { title, script, css,keywords,description,vconsole } = options;
+  let env;
   return {
+    name:'vite-plugin-html-info-inject',
+    config(_, { command }) {
+      env = command;
+    },
     transformIndexHtml(html) {
       let result = '';
       if (title) {
@@ -33,6 +37,10 @@ const vitePluginHtmlInfoInject = (options) => {
         })
       } else if (isString(script)) {
         result= result.replace(Regex.endHtml, `<script src="${script}"></script>\n</html>`)
+      }
+      if (vconsole&&env=='serve') {
+        const content = fs.readFileSync(path.resolve(path.resolve(__dirname,'./utils/vconsole.js')));
+        result = result.replace(Regex.endHtml, `<script>${Buffer.from(content).toString('utf-8')}</script>\n</html>`);
       }
       return result;
     }
